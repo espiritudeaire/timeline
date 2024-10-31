@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Personaje</title>
+</head>
+<body>
+    <h1>Agregar Nuevo Personaje</h1>
+    <form action="/personajes" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required><br>
+        <label>País:</label>
+        <input type="text" name="pais" required><br>
+        <label>Época:</label>
+        <input type="text" name="epoca" required><br>
+        <label>Descripción:</label>
+        <textarea name="descripcion" required></textarea><br>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

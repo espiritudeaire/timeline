@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personajes</title>
+    <link rel="stylesheet" href="./css/tests_dates.css">
+</head>
+
+<body>
+    <h1>Lista de Personajes</h1>
+    <a href="/personajes/new">Agregar Nuevo Personaje</a>
+    <ul>
+
+        <% personajes.forEach(personaje=> { %>
+            <li>
+                <strong>
+                    <%= personaje.nombre %>
+                </strong> - <%= personaje.pais %> - <%= personaje.epoca %><br>
+                        <a href="/personajes/<%= personaje._id %>/edit">Editar</a>
+                        <form action="/personajes/<%= personaje._id %>/delete" method="POST" style="display:inline;">
+                            <button type="submit">Eliminar</button>
+                        </form>
+            </li>
+            <% }); %>
+
+
+    </ul>
+    <div id="main-container">
+        <div id="timeline">
+           
+        </div>
+    </div>
+    <script type="module" src="./js/tests_dates.js"></script>
+</body>
+
+</html>
